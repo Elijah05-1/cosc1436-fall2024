@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+/.vs
+/classwork/Chatper111/.vs/Chatper111
+/classwork/HelloWorld1
+/classwork/Chatper111/HelloWolrd11/x64/Debug
+/classwork/Chatper111/HelloWolrd11/HelloWolrd11.vcxproj.user
+/classwork/Chatper111/x64/Debug
+*.sln
+/.gitignore
+/.gitignore
+/.gitignore
