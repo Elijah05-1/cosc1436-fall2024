@@ -25,9 +25,12 @@ int main()
 	//std::cout << R"C:\\windows\\temp";
 
 	//Variables - named memory location to store data
-	//
-	//Declaration - tell compiler a variable exist
-	// Scope - Lifetime of a Variable/identifier:Point of declaration to end of block
+	//Delaration - tell comiler a variable exists
+    // Scope - lifetime of a variable/identifier: Point of declaration to end of block
+    // Expression - can be used anywhere an expression is allowed
+    // Styling - Name: nouns, Casing: Camel
+
+    // variable-decl ::= T id [ '=' E ] [ '.' id [ '=' E ] }* ';'
 	int length;
 	length = 0;
 
@@ -36,4 +39,74 @@ int main()
 	int rating = 3, stars = 5;
 
 	std::cout << length;
+
+    //Identifiers 
+    //int_hours, _1stGrade, 1stGrade, first - grade;
+    int examgrade; hoursWorked;
+    //int exam_grade, hour_worked; DONT DO THIS
+    //std::cout << e
+
+    // Types
+    //  Defines what kind of data is stored, range, size
+    //  Primitves - understood by lang
+    // Type | Size | Range |
+    // |- | - | 
+    // | short | 2 | +-32767 (integral) |
+    // | int | 4 | +- 2 billion (defaullt) |
+    // | long | 4 | +-billion |
+    // | unsiged * | * | 0-
+    // Floats
+    // | float | 4 | E- 38 | precision: 5-7 |
+    // | double | 8 | E+308 | precision: 12-15 (default) |
+    // Text
+    // | char | 1 | -128 to 127 | character
+    // | std::string | * | text | 
+    // | bool | 1? | true or false 
+    short s;
+    int i = 0;
+    long l = 5L;
+    unsigned int ui = 3U; 
+    float pi = 3.14159f;
+    double pi = 3.14159; 
+    double largeNumber = 10E100; 
+    char c = 'A';
+    std::string name = "Bob";
+    bool isPassing = true;
+    //int isOK = 1; // Don't do this
+    int intSize = sizeof(int);
+
+    //Assignment
+    // asn_op ::= V = E
+    // Must be type compatible
+    // Expression of type Vt
+    // Associativity - Right 
+    int shapeLength = 10;
+    int shapeWidth = 20;
+    int shapeArea;
+
+    shapeArea = shapeLength;
+    shapeWidth = 10;
+    //20 = shareWidth;
+
+    shapeArea = shapeLength = shapeWidth = 20; 
+
+    //Arithmetic operators
+    // + - * / % (int modulus)
+    //  arith_op ::= Et op Et
+    shapeArea = shapeLength * shapeWidth;
+    int remainder = 10 % 3; // 1 
+    int result = 10 / 3; // 3
+    double dresult = 10.0 / 3.0; // 3.333
+
+    // unary_op ::= + Et | - Et
+    int positiveValue = 10;
+    int negativeValue = -positiveValue;
+
+    //Scope 
+    // block-statement ::= { S* }
+    {
+        int newVariable = 10; 
+    }
+    //std::cout << newVariable;
+
 }
