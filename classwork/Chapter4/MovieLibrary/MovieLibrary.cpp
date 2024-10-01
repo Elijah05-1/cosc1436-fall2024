@@ -269,7 +269,7 @@ int main()
         getline(cin, genre);
         if (genre != "")
             break; //Exits the loop
-        continue;  //Loops only - stop the current iteration and loops again
+        //continue;  //Loops only - stop the current iteration and loops again
        
             movie.Genre += genre + ", ";
     };
