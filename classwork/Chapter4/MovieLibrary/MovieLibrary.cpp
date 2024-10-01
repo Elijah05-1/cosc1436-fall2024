@@ -23,6 +23,8 @@ struct Movie
     int ReleaseYear;
 
     bool IsClassic;
+
+    string Genre;
 };
 
 //Integral data type with named values
@@ -92,7 +94,8 @@ int main()
     MenuCommand menuCommand = (MenuCommand)0;
     //bool done = false;
     //while (!done)
-    //while (menuCommand == 0); infinite loop, don't do it 
+    //while (menuCommand == 0); infinite loop, don't do it
+
     while (menuCommand == 0)
     {
         char input;
@@ -115,6 +118,7 @@ int main()
             default: cout << "Bad input" << endl; break;
         };
     };
+    cin.ignore();
 
     //int shouldntWork = MenuCommand::MC_AddMovie;
     //menuCommand = (MenuCommand)100;
@@ -237,7 +241,48 @@ int main()
             };
         };
     };
+    cin.ignore();
 
+    //Get genre(s)
+    //int genreCount = 0;
+    //while (genreCount < 5)   // = 0, < N  (rarely) = 1, <= N
+    //{
+    //    cout << "Enter optional genre " << (genreCount + 1) << ": ";
+
+    //    string genre;
+    //    getline(cin, genre);
+    //    if (genre != "")
+    //    {
+    //        movie.Genre += genre + ", ";
+    //    };
+
+    //    genreCount++;  //prefix/postfix
+    //};
+
+    // for loop - designed to iterate a fixed number of times a a well know start and end 
+    int genreCount = 0;
+    for (int index = 0; index <5; ++index) // = 0, < N  (rarely) = 1, <= N
+    {
+        cout << "Enter optional genre " << (index + 1) << ": ";
+
+        string genre;
+        getline(cin, genre);
+        if (genre != "")
+            break; //Exits the loop
+        continue;  //Loops only - stop the current iteration and loops again
+       
+            movie.Genre += genre + ", ";
+    };
+
+        
+    };
+   // cout << genreIndex;
+
+    //More complex for loops
+    //for (int index = 0; int y = 1; index < 5, index < y; ++index, y+=2) // = 0, < N (rarely) =1, <=N
+    //int someIndex = 0;
+    //for (;;) {}; //infintie loop
+   
     ///// Display movie details
     cout << "---------------" << endl;
     cout << movie.Title << " (" << movie.ReleaseYear << ")" << endl;
@@ -263,7 +308,8 @@ int main()
     //Shortest form using conditional operator => Eb ? Et : Ef  
     // Et & Ef = must be the exact same type, type coercion is not allowed  
     cout << "Is Classic? " << (movie.IsClassic ? "Yes" : "No") << endl;
-
+    if (movie.Genre != "")
+        cout << "Genre(s) " << movie.Genre << endl;
     if (movie.Description != "")
         cout << movie.Description << endl;
     cout << "---------------" << endl;
