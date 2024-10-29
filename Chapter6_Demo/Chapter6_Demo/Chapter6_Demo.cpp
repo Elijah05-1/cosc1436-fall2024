@@ -10,7 +10,46 @@ int Factorial( int number)
 
     return result;
 }
+void GradeArrayDemo()
+{
+    const int MaxGrades = 20;
+    double dummyValue2 = -1;
+    int grades[MaxGrades];
+    double dummyValue = 0;
+    for (int index = 0; index < MaxGrades; ++index)
+    {
+        grades[index] = 100;
+    };
+    int indexToChange;
+    do
+    {
+        std::cout << "Enter the index of the grade to change: ";
+        std::cin >> indexToChange;
+    } while (indexToChange < 0 || indexToChange >= MaxGrades);
+    int input;
+    std::cout << "Enter the index of the grade to change: ";
+    std::cin >> indexToChange;
 
+    int newGrade;
+    std::cout << "Enter the new grade: ";
+
+    grades[indexToChange] = newGrade;
+    std::cout << "Enter the index of the grade to change: ";
+    std::cin >> grades[index];
+    //grades[index] = 100;
+    if (grades[index] <= 0)
+        break;
+};
+
+for (int index = 0; index < MaxGrades; ++index)
+{
+    std::cout << grades[index] << std::endl;
+    for (index = 0; index < MaxGrades; ++index)//, ++ count)
+    {
+        std::cout << "Enter a grade; ";
+        std::cin >> grades[index] << std:endl;
+}
+}
 int Factorial2(int number)
 {
     if (number <= 1)
@@ -49,7 +88,15 @@ void DisplayTruthTable()
     std::cout << true << false << (true && false ? "true" : "false") << (true || false) << std::endl;
     std::cout << true << true << (true && true ? "true" : "false") << (true || true) << std::endl;
 }
+void  InitArrayDemo
+{
+   const int MaxRates = 100;
+   double payRate[MaxRates] = {0}; //Zero initize
 
+   //Zero init
+   for (int index = 0; index < MaxRates; ++ index)
+       payRates[index] = 0 
+}
 bool isDigit(char value)
 {
     switch (value)
